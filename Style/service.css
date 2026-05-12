@@ -1,0 +1,134 @@
+
+.hero {
+    padding: 4.5rem 0 2.5rem;
+    margin: 0 30px;
+}
+
+.hero-copy {
+    max-width: 640px;
+}
+
+.hero-copy .eyebrow {
+    font-size: 2rem;
+    font-weight: 500;
+}
+.hero-copy h3 {
+    font-size: 2.4rem;
+    line-height: 1.04;
+    color: #091c29;
+    margin-bottom: 1.25rem;
+}
+
+.hero-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.hero-card {
+    border-radius: 28px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 30px 80px rgba(15, 34, 52, 0.1);
+}
+
+.hero-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.servic {
+    padding: 3rem 0 1.5rem;
+    margin: 0 50px;
+    
+}
+
+.section-header {
+    text-align: right;
+    margin-bottom: 2rem;
+
+}
+
+.section-header p {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.section-header h2 {
+    font-size: clamp(2rem, 3vw, 2.75rem);
+    line-height: 1.1;
+    color: #061723;
+}
+
+.serv-grid {
+    margin: 2rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.service-pill {
+    padding: 1.25rem 1.5rem;
+    border-radius: 26px;
+    border: none;
+    background: #e5f5fb;
+    color: #0d2733;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.service-pill a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+}
+.service-pill:hover,
+.service-pill.active {
+    background: #041e26;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+
+
+
+@media (max-width: 980px) {
+    .hero-gallery,
+    .serv-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .service-pill.full {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 720px) {
+    .header-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .hero-gallery,
+    .serv-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-pill.full {
+        grid-column: span 1;
+    }
+
+    .subscribe-card form {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
